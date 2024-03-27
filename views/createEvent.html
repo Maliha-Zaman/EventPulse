@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Event</title>
+    <style>
+        /* Basic styling for form layout. You can enhance this as needed. */
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create New Event</h2>
+    <form action="/events/create" method="POST">
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <!-- For simplicity, I'm assuming a single file input. You can enhance this for multiple file uploads. -->
+        <label for="files">Upload File (optional):</label>
+        <input type="file" id="files" name="files">
+
+        <input type="submit" value="Create Event">
+    </form>
+</body>
+</html>
